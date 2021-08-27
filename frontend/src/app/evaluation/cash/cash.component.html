@@ -1,0 +1,16 @@
+<br>
+<br>
+<br>
+<button type="button" class="btn btn-outline-primary btn-block" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+    <h3>Cash - {{totalCash | currency:'$'}}</h3>
+</button>
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <div class = "card-body px-0">
+        <ul class = "list-group">
+            <li class = "list-group-item text-center" *ngFor = 'let account of data'>
+                <p><b>{{account.bank}}</b> - Acc Num: xxxx{{account.acct_number | slice:-6}}</p>
+                <p>{{account.acct_type}} - {{account.value | currency: '$'}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

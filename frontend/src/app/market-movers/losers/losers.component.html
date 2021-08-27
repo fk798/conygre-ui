@@ -1,0 +1,45 @@
+    <h3 class = "text-center">Your Losers</h3>
+    <div class = "card-body px-0">
+        <ul class = "list-group">
+            <li class = "list-group-item text-center">
+                <b>{{stocks[0].symbol}}</b> |
+                {{stocks[0].shortName}} |
+                {{stocks[0].regularMarketPrice | currency: '$'}} |
+                <strong [ngClass]='{positive: stocks[0].regularMarketChangePercent > 0, negative:stocks[0].regularMarketChangePercent < 0}'>
+                {{stocks[0].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[0].regularMarketChangePercent | number:'1.2-2'}}%
+                </strong>
+            </li>
+            <li class = "list-group-item text-center">
+                <b>{{stocks[1].symbol}}</b> |
+                {{stocks[1].shortName}} |
+                {{stocks[1].regularMarketPrice | currency: '$'}} |
+                <strong [ngClass]='{positive: stocks[1].regularMarketChangePercent > 0, negative:stocks[1].regularMarketChangePercent < 0}'>
+                {{stocks[1].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[1].regularMarketChangePercent | number:'1.2-2'}}%
+                </strong>
+            </li>
+            <li class = "list-group-item text-center">
+                <b>{{stocks[2].symbol}}</b> |
+                {{stocks[2].shortName}} |
+                {{stocks[2].regularMarketPrice | currency: '$'}} |
+                <strong [ngClass]='{positive: stocks[2].regularMarketChangePercent > 0, negative:stocks[2].regularMarketChangePercent < 0}'>
+                {{stocks[2].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[2].regularMarketChangePercent | number:'1.2-2'}}%
+                </strong>
+            </li>
+            <li class = "list-group-item text-center">
+                <b>{{stocks[3].symbol}}</b> |
+                {{stocks[3].shortName}} |
+                {{stocks[3].regularMarketPrice | currency: '$'}} |
+                <strong [ngClass]='{positive: stocks[3].regularMarketChangePercent > 0, negative:stocks[3].regularMarketChangePercent < 0}'>
+                {{stocks[3].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[3].regularMarketChangePercent | number:'1.2-2'}}%
+                </strong>
+            </li>
+            <li class = "list-group-item text-center">
+                <b>{{stocks[4].symbol}}</b> |
+                {{stocks[4].shortName}} |
+                {{stocks[4].regularMarketPrice | currency: '$'}} |
+                <strong [ngClass]='{positive: stocks[4].regularMarketChangePercent > 0, negative:stocks[4].regularMarketChangePercent < 0}'>
+                {{stocks[4].regularMarketChangePercent > 0 ? '+' : ''}}{{stocks[4].regularMarketChangePercent | number:'1.2-2'}}%
+                </strong>
+            </li>
+        </ul>
+    </div>
